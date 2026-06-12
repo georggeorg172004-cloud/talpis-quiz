@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Квиз Леонида Тальписа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="brand" aria-label="ВсеЛенская терапия">
+        <img class="brand-logo" src="https://static.tildacdn.one/tild6536-3462-4763-a236-626336323731/Group_2131329959.svg" alt="ВсеЛенская терапия">
+      </header>
+
+      <section class="screen screen-start is-active" data-screen="start">
+        <div class="intro-copy">
+          <p class="eyebrow">Персональная рекомендация</p>
+          <h1>Пройдите тест из 10 вопросов, и мы пришлем вам персональные рекомендации по продуктам Леонида Тальписа</h1>
+          <p>Чтобы начать, ответьте на вопросы о вашем запросе, опыте и готовности к следующему шагу. Контактные данные понадобятся после теста, чтобы отправить рекомендацию на почту.</p>
+          <button class="button button-primary" type="button" data-action="start">Начать тестирование</button>
+        </div>
+
+        <aside class="summary-card" aria-label="Что внутри квиза">
+          <div class="summary-number">10</div>
+          <p>вопросов с понятными вариантами ответа</p>
+          <div class="summary-line"></div>
+          <p>После теста вы получите подходящий следующий шаг по продуктам Леонида Тальписа.</p>
+        </aside>
+      </section>
+
+      <section class="screen screen-quiz" data-screen="quiz" aria-live="polite">
+        <div class="quiz-card">
+          <div class="quiz-topline">
+            <span data-question-count>Вопрос 1 из 10</span>
+            <span data-score-preview>Выберите один вариант</span>
+          </div>
+          <div class="progress" aria-hidden="true">
+            <div class="progress-fill" data-progress-fill></div>
+          </div>
+          <h2 data-question-title></h2>
+          <div class="options-list" data-options></div>
+          <p class="validation-message" data-quiz-error></p>
+          <div class="actions-row">
+            <button class="button button-primary" type="button" data-action="next">Далее</button>
+            <button class="button button-secondary" type="button" data-action="back">Назад</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-contact" data-screen="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Почти готово</p>
+          <h2>Введите контактные данные, и мы отправим вашу персональную рекомендацию</h2>
+        </div>
+
+        <form class="form-card" data-contact-form novalidate>
+          <h2>Получить рекомендацию</h2>
+          <label>
+            <span>ФИО</span>
+            <input name="name" type="text" autocomplete="name" placeholder="Иванова Анна" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" placeholder="name@email.com" required>
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+          </label>
+          <label class="checkbox-line">
+            <input name="consent" type="checkbox" required>
+            <span>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных и политикой конфиденциальности.</span>
+          </label>
+          <p class="validation-message" data-form-error></p>
+          <button class="button button-primary button-wide" type="submit">Получить рекомендацию</button>
+        </form>
+      </section>
+
+      <section class="screen screen-final" data-screen="final">
+        <div class="final-card">
+          <p class="eyebrow">Готово</p>
+          <h2>Спасибо!</h2>
+          <p class="final-message">Индивидуальные рекомендации по продуктам уже отправлены вам на почту.</p>
+          <div class="result-box" data-result-box></div>
+          <div class="actions-row">
+            <a class="button button-primary" data-result-link target="_blank" rel="noreferrer">Перейти к рекомендации</a>
+            <button class="button button-secondary" type="button" data-action="restart">Пройти заново</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
