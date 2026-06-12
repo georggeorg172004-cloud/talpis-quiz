@@ -69,8 +69,8 @@ input {
 
 .screen-start,
 .screen-contact {
-  grid-template-columns: minmax(0, 560px) minmax(380px, 1fr);
-  gap: clamp(44px, 7vw, 104px);
+  grid-template-columns: minmax(0, 540px) minmax(560px, 1fr);
+  gap: clamp(36px, 5.4vw, 76px);
   align-items: center;
   min-height: calc(100vh - 164px);
 }
@@ -192,17 +192,18 @@ h2 {
 .hero-visual {
   position: relative;
   display: flex;
-  min-height: 610px;
+  min-height: 720px;
   align-items: flex-end;
   justify-content: center;
-  align-self: end;
+  align-self: start;
+  margin-top: -24px;
 }
 
 .hero-visual img {
   position: relative;
   z-index: 1;
-  width: min(480px, 100%);
-  max-height: 650px;
+  width: min(600px, 100%);
+  max-height: 760px;
   object-fit: contain;
   filter: drop-shadow(0 20px 34px rgba(73, 53, 35, 0.16));
 }
@@ -211,36 +212,36 @@ h2 {
   position: absolute;
   z-index: 2;
   display: grid;
-  min-width: 190px;
-  max-width: 258px;
-  gap: 8px;
+  min-width: 244px;
+  max-width: 296px;
+  gap: 10px;
   border: 1px solid rgba(226, 211, 192, 0.9);
-  border-radius: 8px;
+  border-radius: 9px;
   background: rgba(255, 255, 255, 0.94);
-  padding: 18px 20px;
+  padding: 22px 24px;
   color: #2c2b2a;
   box-shadow: 0 16px 34px rgba(82, 63, 45, 0.1);
 }
 
 .hero-note strong {
-  font-size: 23px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.03;
 }
 
 .hero-note small {
   color: #80766f;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.35;
 }
 
 .hero-note em {
   justify-self: start;
-  min-height: 24px;
+  min-height: 26px;
   border-radius: 999px;
   background: rgba(232, 241, 234, 0.95);
-  padding: 5px 12px;
+  padding: 6px 14px;
   color: #49645a;
   font-size: 10px;
   font-style: normal;
@@ -249,20 +250,20 @@ h2 {
 }
 
 .hero-note-top {
-  top: 94px;
-  left: 4%;
+  top: 38px;
+  left: 1%;
 }
 
 .hero-note-right {
-  top: 318px;
-  right: 0;
-  max-width: 214px;
+  top: 342px;
+  right: -18px;
+  max-width: 286px;
 }
 
 .hero-note-bottom {
-  left: 0;
-  bottom: 70px;
-  max-width: 270px;
+  left: -24px;
+  bottom: 76px;
+  max-width: 300px;
 }
 
 /* Legacy summary styles are intentionally unused after the Figma redesign. */
@@ -514,33 +515,51 @@ h2 {
   }
 
   .hero-visual {
-    min-height: 500px;
+    min-height: 560px;
+    margin-top: -18px;
   }
 
   .hero-visual img {
-    width: min(390px, 100%);
-    max-height: 520px;
+    width: min(470px, 100%);
+    max-height: 590px;
   }
 
   .hero-note {
-    padding: 10px 12px;
-    min-width: 168px;
-    max-width: 220px;
+    padding: 14px 16px;
+    min-width: 190px;
+    max-width: 240px;
     gap: 6px;
   }
 
   .hero-note strong {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .hero-note small {
-    font-size: 10px;
+    font-size: 10.5px;
   }
 
   .hero-note em {
     min-height: 20px;
     padding: 4px 10px;
     font-size: 9px;
+  }
+
+  .hero-note-top {
+    top: 22px;
+    left: 2%;
+  }
+
+  .hero-note-right {
+    top: 266px;
+    right: -6px;
+    max-width: 220px;
+  }
+
+  .hero-note-bottom {
+    left: -8px;
+    bottom: 54px;
+    max-width: 230px;
   }
 
   .quiz-card,
