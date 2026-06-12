@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=resilient-quiz">
+    <link rel="stylesheet" href="./styles.css?v=figma-assets">
   </head>
   <body>
     <main class="app-shell">
@@ -19,15 +19,15 @@
         <div class="intro-copy">
           <p class="eyebrow">Персональная рекомендация</p>
           <h1>Пройдите тест из 10 вопросов, и мы пришлем вам персональные рекомендации по продуктам Леонида Тальписа</h1>
-          <p>Чтобы начать, ответьте на вопросы о вашем запросе, опыте и готовности к следующему шагу. Контактные данные понадобятся после теста, чтобы отправить рекомендацию на почту.</p>
+          <p>Время прохождения — 2 минуты. Чтобы начать, ответьте на вопросы о вашем запросе, опыте и готовности к следующему шагу.</p>
           <button class="button button-primary" type="button" data-action="start">Начать тестирование</button>
         </div>
 
-        <aside class="summary-card" aria-label="Что внутри квиза">
-          <div class="summary-number">10</div>
-          <p>вопросов с понятными вариантами ответа</p>
-          <div class="summary-line"></div>
-          <p>После теста вы получите подходящий следующий шаг по продуктам Леонида Тальписа.</p>
+        <aside class="hero-visual" aria-label="Леонид Тальпис">
+          <img src="./assets/leonid-talpis.png" alt="Леонид Тальпис">
+          <span class="hero-note hero-note-top">10 вопросов</span>
+          <span class="hero-note hero-note-right">Персональная рекомендация</span>
+          <span class="hero-note hero-note-bottom">Продукты Леонида Тальписа</span>
         </aside>
       </section>
 
@@ -53,7 +53,7 @@
       <section class="screen screen-contact" data-screen="contact">
         <div class="contact-copy">
           <p class="eyebrow">Почти готово</p>
-          <h2>Введите контактные данные, и мы отправим вашу персональную рекомендацию</h2>
+          <h2>Введите контактные данные — и мы покажем вашу персональную рекомендацию</h2>
         </div>
 
         <form class="form-card" data-contact-form novalidate>
@@ -81,10 +81,8 @@
 
       <section class="screen screen-final" data-screen="final">
         <div class="final-card">
-          <p class="eyebrow">Готово</p>
-          <h2>Спасибо!</h2>
-          <p class="final-message">Индивидуальные рекомендации по продуктам уже отправлены вам на почту.</p>
           <div class="result-box" data-result-box></div>
+          <p class="final-message">Мы также отправили вашу рекомендацию на email.</p>
           <div class="actions-row">
             <a class="button button-primary" data-result-link target="_blank" rel="noreferrer">Перейти к рекомендации</a>
             <button class="button button-secondary" type="button" data-action="restart">Пройти заново</button>
